@@ -71,7 +71,7 @@ def actualizar_curso(curso):
 
 
 def borrar_curso_por_id(curso_id):
-    return str('Falta por implementar')
+    return str(db.cursos.delete_one({'_id': ObjectId(curso_id)}).deleted_count)
 
 
 def consultar_curso_por_id_proyeccion(id_curso, proyeccion=None):
