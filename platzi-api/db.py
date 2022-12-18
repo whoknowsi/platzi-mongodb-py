@@ -67,7 +67,7 @@ def consultar_curso_por_id(id_curso):
 
 def actualizar_curso(curso):
     # Esta funcion solamente actualiza nombre, descripcion y clases del curso
-    return str('Falta por implementar')
+    return str(db.cursos.update_one({'_id': ObjectId(curso['_id'])}, {'$set': {'nombre': curso['nombre'], 'descripcion': curso['descripcion'], 'clases': curso['clases']}}).modified_count)
 
 
 def borrar_curso_por_id(curso_id):
