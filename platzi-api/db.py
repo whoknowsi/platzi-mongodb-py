@@ -30,7 +30,7 @@ def crear_carrera(json):
 
 
 def consultar_carrera_por_id(carrera_id):
-    return str('Falta por implementar')
+    return dumps(db.carreras.find_one({'_id': ObjectId(carrera_id)}))
 
 
 def actualizar_carrera(carrera):
