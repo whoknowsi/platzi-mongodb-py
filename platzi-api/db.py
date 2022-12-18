@@ -39,7 +39,7 @@ def actualizar_carrera(carrera):
 
 
 def borrar_carrera_por_id(carrera_id):
-    return str('Falta por implementar')
+    return str(db.carreras.delete_one({'_id': ObjectId(carrera_id)}).deleted_count)
 
 
 # Clase de operadores
