@@ -26,7 +26,7 @@ def collection_stats(collection_nombre):
 
 
 def crear_carrera(json):
-    return str('Falta por implementar')
+    return str(db.carreras.insert_one(json).inserted_id)
 
 
 def consultar_carrera_por_id(carrera_id):
@@ -80,4 +80,3 @@ def consultar_curso_por_id_proyeccion(id_curso, proyeccion=None):
 
 def consultar_curso_por_nombre(nombre):
     return str('Falta por implementar')
-
