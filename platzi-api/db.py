@@ -35,7 +35,7 @@ def consultar_carrera_por_id(carrera_id):
 
 def actualizar_carrera(carrera):
     # Esta funcion solamente actualiza nombre y descripcion de la carrera
-    return str('Falta por implementar')
+    return str(db.carreras.update_one({'_id': ObjectId(carrera['_id'])}, {'$set': {'nombre': carrera['nombre'], 'descripcion': carrera['descripcion']}}).modified_count)
 
 
 def borrar_carrera_por_id(carrera_id):
