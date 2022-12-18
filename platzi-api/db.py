@@ -53,7 +53,7 @@ def agregar_curso(json):
 
 
 def borrar_curso_de_carrera(json):
-    return str('Falta por implementar')
+    return str(db.carreras.update_one({'_id': ObjectId(json['carrera_id'])}, {'$pull': {'cursos': {'_id': ObjectId(json['curso_id'])}}}).modified_count)
 
 # -----------------Cursos-------------------------
 
