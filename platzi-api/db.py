@@ -58,7 +58,7 @@ def borrar_curso_de_carrera(json):
 
 
 def crear_curso(json):
-    return str('Falta por implementar')
+    return str(db.cursos.insert_one(json).inserted_id)
 
 
 def consultar_curso_por_id(id_curso):
