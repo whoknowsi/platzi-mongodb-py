@@ -16,14 +16,14 @@ conda deactivate
 ## Instalar dependenias del proyecto
 Con el ambiente activado, instalar las dependencias:
 ```
-pip install -r requirements.txt
+conda install --file requirements.txt
 ```
 ## Variables de entorno necesarias para ejecutar el proyecto
 Asegurate de reemplazar el valor de PLATZI_DB_URI por la URI de tu cluster en MongoDB Atlas
 ```
-export FLASK_APP=platzi-api
-export FLASK_ENV=development 
-export PLATZI_DB_URI="MONGO-URI"
+set FLASK_APP=platzi-api
+set FLASK_ENV=development 
+set PLATZI_DB_URI="MONGO-URI"
 ```
 ## Iniciar el servidor de platzi-mongo
 ```
