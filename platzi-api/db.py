@@ -62,7 +62,7 @@ def crear_curso(json):
 
 
 def consultar_curso_por_id(id_curso):
-    return str('Falta por implementar')
+    return dumps(db.cursos.find_one({'_id': ObjectId(id_curso)}))
 
 
 def actualizar_curso(curso):
